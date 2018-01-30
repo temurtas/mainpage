@@ -1,0 +1,819 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University Assignment Title Page 
+% LaTeX Template
+% Version 1.0 (27/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+
+% Instructions for using this template:
+% This title page is capable of being compiled as is. This is not useful for 
+% including it in another document. To do this, you have two options: 
+%
+% 1) Copy/paste everything between \begin{document} and \end{document} 
+% starting at \begin{titlepage} and paste this into another LaTeX file where you 
+% want your title page.
+% OR
+% 2) Remove everything outside the \begin{titlepage} and \end{titlepage} and 
+% move this file to the same directory as the LaTeX file you wish to add it to. 
+% Then add \input{./title_page_1.tex} to your LaTeX file where you want your
+% title page.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\title{Title page with logo}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{gensymb} % this could be problem
+\usepackage{float}
+\usepackage{natbib}
+\usepackage{fancyref}
+\usepackage{subcaption}
+
+\usepackage{pythonhighlight}
+
+\usepackage{xcolor}
+\usepackage{listings}
+
+\definecolor{mGreen}{rgb}{0,0.6,0} % for python
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+
+
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue for matlab
+\definecolor{mylilas}{RGB}{170,55,241}
+
+\lstdefinestyle{CStyle}{
+    commentstyle=\color{mGreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{mGray},
+    stringstyle=\color{mPurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+
+
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+            {-2.5ex\@plus -1ex \@minus -.25ex}%
+            {1.25ex \@plus .25ex}%
+            {\normalfont\normalsize\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to
+\setcounter{tocdepth}{4}    % how many sectioning levels to show in ToC
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+\includegraphics[scale=0.3]{turksatlogo.jpg}\\[1cm]
+% Include a department/university logo - this will require the graphicx package
+ 
+%----------------------------------------------------------------------------------------
+
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE TÜRKSAT A.Ş.}\\[1.5cm] % Name of your university/college
+\textsc{\Large Uydu Programları Direktörlüğü}\\[0.5cm] % Major heading such as course name
+ % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+
+{ \huge \bfseries \large  Preparing Report with Latex}\\[0cm] % Title of your document
+\HRule \\[1cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.35\textwidth}
+\begin{flushleft} \large
+\textbf{Student Name:} \\
+ \textit{---} \\
+\textbf{Student ID:} \\ 
+ \textit{----} \\
+\textbf{SP Beginning Date:} \\
+ \textit{--.--.---} \\
+\textbf{SP End Date:}\\
+ \textit{--.--.---}
+
+
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.6\textwidth}
+\begin{flushright} \large
+\textbf{SP Company Name:} \\ 
+ \textit{TÜRKSAT A.Ş.} \\
+\textbf{SP Company Division:} \\ 
+ \textit{Directorate of Satellite Programming} \\
+\textbf{Supervisor Engineer:} \\
+ \textit{Ömer Eren Can Koçulu} \\
+\textbf{SE Contact Info:} 
+ \textit{ekoculu@turksat.com.tr} 
+\end{flushright}
+\end{minipage}\\[3cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large .. .. 2017}\\[1cm] % Date, change the \today to a set date if you want to be precise
+
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+
+\tableofcontents
+\newpage
+
+
+%\begin{abstract}
+%Your abstract.
+%\end{abstract}
+
+\section{Introduction}
+\- 
+\indent For Indentation in first paragraph.
+\\
+
+	Bir satır boşluk bırakmak, indent yerine geçiyor.
+
+	% Satır atlatmak için \\
+	% Özel sembollerden önce \ kullanılmalı
+	% Gerekli yerlerde boşluk bırakmak için \- kullanıyorum
+		% Özellikle ilk paragraphda indent için kullanıyorum.
+\- \\ \indent
+	Minipage kullanılarak ekran iki parçaya ayrılabilir. Örneği kapak sayfasını hazırlarken kullandım.
+	...  \\
+	...  \\
+	...  \\
+	...  \\
+	...  \\
+	...  \\
+	...  \\
+	...  \\
+	
+\section{Section}
+\- \indent Section
+
+	2.1.2.3 gibi başlıkları üretme yolu
+\subsection{Subsection}
+\- \indent Subsection
+\subsubsection{Subsubsection}
+\- \indent Subsubsection
+\paragraph{Paragraph}
+\- \indent Paragraph
+\subparagraph{Subparagraph}
+\- \\ \\ \indent SubParagraph
+
+
+\section{Style}
+\-
+\\
+\textbf{ Text Bold} 
+\\
+\textit{ Text Italic} 
+\\
+\textsc{ Textsc }
+\\
+\textsf{ Textsf }
+\\
+\textsl{ Textsl }
+\\
+\texttt{ Texttt }
+
+
+\section{Listeler}
+
+\subsection{Numaralı Listeler}
+
+\begin{enumerate}
+\item Company Name
+\item Company Location
+\item General Description of the Company
+\item A Brief History of the Company
+\end{enumerate}
+
+\subsection{Numarasız Listeler}
+
+\begin{itemize}
+\item Company Name
+\item Company Location
+\item General Description of the Company
+\item A Brief History of the Company
+\end{itemize}
+
+\section{Resim \& Tablo}
+
+\subsection{Resim Ekleme ve Refer}
+\-
+\indent
+Aşağıdaki kod yarımıyla resim eklenebilir, \textbf{tag} ve \textbf{ref} yardımıyla refer edilebilir. ilk satırın sonundaki [H] [h!] [t!] gibi yardımcı komutlar, figure ün yerini belirliyor. [scale=0.3] gibi komutlarla boyut belirlenebilir. Logo \textit{Figure~\ref{fig:logo}}'den görülebilir.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{turksatlogo.jpg}\\
+\caption{\label{fig:logo} TÜRKSAT Logo }
+\end{figure}
+
+\subsection{Tablo Yapımı ve Refer}
+\- \indent
+	Gerekli tablo \textit{Table~\ref{tab:roles}}'den görülebilir.
+
+\textit{Table~\ref{tab:roles}}
+
+\begin{table}[h!]
+  \centering
+ 
+    \begin{tabular}{c|c|c}
+       &$$Roles$$ & $$Responsible Person$$ \\ \hline
+       1 & ~~~~Product Owner & Halil Temurtaş  \\ \hline
+       2 & ~~~~Scrum Master  & Eren Koçulu  \\ \hline
+       3 & ~~Hardware Engineer & ~~~~Taha İzmir \& Halil Temurtaş \\ \hline
+       4 & Software Engineer & ~~~~Arif Göçer \& Halil Temurtaş  \\ \hline
+       5 & ~~~~Structure Engineer & ~~~~Taha İzmir \&  Arif Göçer \\ \hline
+       6 & ~~~~Test Engineer & ~~~~Arif Göçer \& Halil Temurtaş 
+      
+  \end{tabular}
+  \caption{Roles}
+  \label{tab:roles}
+\end{table}
+
+\section{Kod ekleme}
+
+\subsection{Python Code}
+\- \indent
+	Başka biri tarafında hazırlanan hazır bir kütüphane kullandım. begin{python} ve end{python} komutu arasına yazılan kodlar, pdf ekranında rahatça okunabilir.
+	
+\begin{python}
+# Using Python fort he first time!! 
+print("Hello Intership!!!")  
+
+x = 1 
+if x == 1:
+	# indented four spaces, indents works as brackets in C!
+    print("x is 1.")
+if x==3:
+    print(23)
+
+myint = 7
+print(myint)  # use '#' for commenting 
+
+# A sample script that uses lists:
+
+numbers=[]	# creates a list called numbers.
+numbers.append(1)	# adds '1' to numbers as first element.
+numbers.append(2)
+numbers.append(3)
+
+strings=[]  # creates a list called strings.
+strings.append("hello")
+strings.append("world")
+
+names = ["Ali", "Ahmet", "Ayse"]	# adds Ali, Ahmet and Ayse to names. 
+
+second_name=names[1]
+
+print(numbers)	# prints [1, 2, 3]
+print(strings)	# prints ['hello', 'world']
+print("The 2nd name on the name list is %s" %second_name)     # prints the second name on the names list is Ahmet!
+
+
+
+\end{python}
+
+\subsection{Arduino ve C kodları}
+\- \indent
+	Bu sefer kütüphane yerine, hazır kodu ilk sayfaya ekleyerek C ye özel bi listing hazırlamış olduk. Gerekli begin ve end komutları arasındaki kodlar rahatça okunabilir.
+	
+
+\begin{lstlisting}[style=CStyle]
+#include <Servo.h>
+
+Servo Servo1;	// create servo named Servo1 to control a servo
+int pos = 0;	// variable to store the servo position }
+
+void setup() 
+{  
+  Servo1.attach(9);	// attaches the servo on pin 9 to the servo object  
+} 
+
+void loop() 
+{ 
+    for (pos = 0; pos <= 180; pos += 1)	// goes from 0 degrees to 180 degrees in steps of 1 degree  
+    {
+        Servo1.write(pos);	// tell servo to go to position in variable 'pos' 
+        delay(15);	// waits 15ms for the servo to reach the position 
+    }
+    for (pos = 180; pos >= 0; pos -= 1) // goes from 180 degrees to 0 degrees 
+    {
+       Servo1.write(pos);	// tell servo to go to position in variable 'pos'  
+        delay(15);	// waits 15ms for the servo to reach the position  
+    } 
+}
+\end{lstlisting}
+
+\subsection{Matlab Code}
+\- \indent
+	C ye benzer bi yolla hallettim. Kodlar ilk sayfada bulunabilir.
+	
+\begin{lstlisting}[language=Matlab]
+function [a b c] = sort3(A) 
+a1 = A(1) 
+a2 = A(2) 
+a3 = A(3) 
+
+if a1 <= a2 
+    if a2 <= a3
+        a = a1
+        b = a2
+        c = a3
+    else
+        e = a3 
+        a3 = a2 
+        a2 = e 
+
+        if a1 <= a2 
+            a = a1 
+            b = a2 
+            c = a3 
+        else 
+            w = a2  
+            a2 = a1 
+            a1 = w 
+            a = a1 
+            b = a2 
+            c = a3 
+        end
+    end
+else 
+    w = a2 
+    a2 = a1 
+    a1 = w 
+    if a2 >= a3 
+        e = a3 
+        a3 = a2 
+        a2 = e 
+        if a1 <= a2
+            a = a1 
+            b = a2 
+            c = a3 
+        else 
+            w = a2 
+            a2 = a1 
+            a1 = w 
+            a = a1 
+            b = a2 
+            c = a3 
+        end 
+    else 
+        a = a1 
+        b = a2 
+        c = a3 
+    end  
+end
+end
+}
+\end{lstlisting}
+
+
+\tikzset{
+desicion/.style={
+    diamond,
+    draw,
+    text width=4em,
+    text badly centered,
+    inner sep=0pt
+},
+block/.style={
+    rectangle,
+    draw,
+    text width=10em,
+    text centered,
+    rounded corners
+},
+cloud/.style={
+    draw,
+    ellipse,
+    minimum height=2em
+},
+descr/.style={
+    fill=white,
+    inner sep=2.5pt
+},
+connector/.style={
+    -latex,
+    font=\scriptsize
+},
+rectangle connector/.style={
+    connector,
+    to path={(\tikztostart) -- ++(#1,0pt) \tikztonodes |- (\tikztotarget) },
+    pos=0.5
+},
+rectangle connector/.default=-2cm,
+straight connector/.style={
+    connector,
+    to path=--(\tikztotarget) \tikztonodes
+}
+}
+
+\tikzset{
+desicion/.style={
+    diamond,
+    draw,
+    text width=4em,
+    text badly centered,
+    inner sep=0pt
+},
+block/.style={
+    rectangle,
+    draw,
+    text width=10em,
+    text centered,
+    rounded corners
+},
+cloud/.style={
+    draw,
+    ellipse,
+    minimum height=2em
+},
+descr/.style={
+    fill=white,
+    inner sep=2.5pt
+},
+connector/.style={
+    -latex,
+    font=\scriptsize
+},
+rectangle connector/.style={
+    connector,
+    to path={(\tikztostart) -- ++(#1,0pt) \tikztonodes |- (\tikztotarget) },
+    pos=0.5
+},
+rectangle connector/.default=-2cm,
+straight connector/.style={
+    connector,
+    to path=--(\tikztotarget) \tikztonodes
+}
+}
+
+\vfill
+
+
+
+
+
+ % Fill the rest of the page with whitespace
+
+% Commands to include a figure:
+%\begin{figure}
+%\centering
+%\includegraphics[width=0.5\textwidth]{frog.jpg}
+%\caption{\label{fig:frog}This is a figure caption.}
+%\end{figure}
+%\subsubsection{Setting Threshold Level}
+%We obtained a triangular wave with $V_{pp}\approx 9.3 V$(asymmetric 9V in experiments). Now we will use a comparator to generate PWM. The triangular wave goes into the noninverting input of the comparator. The inverting input is a DC voltage for setting threshold level. After comparison, we obtain PWM with desired duty cycle \textit{(Figure~\ref{fig:threshold})}. The threshold adjuster has a DC range from $+ V_{pp}$ to $- V_{pp}$. Let us clear how this part of the circuit works. Assume we have $0 V$ DC in inverting input of opamp. Opamp changes output by comparing inputs. Till triangular wave becomes $0 V$ from $+ V_{pp}$, opamp outputs $+ V_{sat}$. On the other hand till triangular wave becomes $- V_{pp}$ from $0 V$, opamp outputs $- V_{sat}$. Since triangular wave is symmetric, these time intervals are equal, resulting a 50\% duty cycle. We can look \textit{Figure~\ref{fig:pwm1}} to see simulation result.
+%Let us give another example with numbers. Assume that we have $-2.5 V$ DC in the inverting input of opamp. Opamp outputs a voltage by comparing the inputs. Till triangular wave becomes $-2.5 V$ from $+ V_{pp}$, opamp gives $+ V_{sat}$. On the other hand till triangular wave becomes $- V_{pp}$ from $-2.5 V$, opamp outputs $- V_{sat}$. Since triangular wave is symmetric, these time intervals have certain ratio, resulting PWM has 75\% duty cycle. We can look \textit{Figure~\ref{fig:pwm2}} to see simulation result.
+%Further calculations can be done by following equation, where \textit{D} is the duty cyle, \textit{T} is the time the signal is active and \textit{P} is the total period of the signal.
+%\begin{equation}
+%D = \frac{T}{P} * 100
+%\end{equation}
+%
+%In \textit{Figure~\ref{fig:pwm1} and Figure~\ref{fig:pwm2}}, blue represents generated PWM, magenta represents threshold level and green is generated triangular wave. The experimental results are also presented in \textit{Figure~\ref{fig:pwm1sim} and Figure~\ref{fig:pwm2sim}}, respectively.  The one deflection, in lab sessions, was that $+V_{peak}$ and $-V_{peak}$ of the duty cycle was not equal. The duty cycle has a DC offset. It were causing problems in the next stages of the circuit. For this purpose, we  have connected a series $0.483V$ battery between PWM Output and RC circuit to have symmetric duty cycle with respesct to x axis. By this way we will be able to indicate 0\degree C for 50\% duty cycle. The symmetric duty cycle could be seen in the next section \textit{Transforming PWM to DC} in \textit{Figure~\ref{fig:rcsim}}.
+%\vfill
+%\begin{figure}[t!]
+%\centering
+%\includegraphics[scale=0.3]{pwm1.png}
+%\caption{\label{fig:pwm1}Waveforms of Outputs of Threshold Adjuster and PWM Generator.}
+%\end{figure}
+%
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=0.1]{pwm1sim.jpg}
+%\caption{\label{fig:pwm1sim}Waveforms of Outputs of Threshold Adjuster.}
+%\end{figure}
+%\vfill
+%\begin{figure}[t!]
+%\centering
+%\includegraphics[scale=0.3]{pwm2.png}
+%\caption{\label{fig:pwm2}Waveforms of Outputs of Threshold Adjuster and PWM Generator.}
+%\end{figure}
+%
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=0.1]{pwm2sim.jpg}
+%\caption{\label{fig:pwm2sim}Waveforms of Outputs of Threshold Adjuster.}
+%\end{figure}
+%\vfill
+%
+%\subsubsection{Transforming PWM to DC}
+%By PWM generation, we are able to see the desired temperature level visually which is analogous to remote control in real life. However, we shall send a DC voltage to decision unit. This choice is suitable with our design. For this purpose, to transform PWM to DC voltage, we have used well-known two stage RC circuit\textit{(Figure~\ref{fig:dcgenerate})}.
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=0.4]{dcgenerate.png}
+%\caption{\label{fig:dcgenerate}Transforming PWM to DC.}
+%\end{figure} The RC circuit basically takes the average of the PWM and generates a DC voltage with ripple. Low ripple means more accurate DC voltage. So, to increase accuracy of DC voltage, we have used second order RC circuit. Second RC circuit reduces ripple voltage significantly, provides almost ideal DC voltage. 
+%\begin{figure}[hb!]
+%\centering
+%\includegraphics[scale=0.35]{rc.png}
+%\caption{\label{fig:rc}Observed wave forms in corresponding nodes in  \textit{Figure~\ref{fig:dcgenerate}}.}
+%\end{figure}As seen in \textit{Figure~\ref{fig:rc}} it takes a little longer for second order RC circuit to reach steady state when compared to first order RC circuit, however, it is negligible. In \textit{Figure~\ref{fig:rc}}, we can observe DC voltage generation for 50\% PWM. The corresponding nodes are indicated in \textit{Figure~\ref{fig:dcgenerate}}. As mentioned in the previous section, we faced duty cycle with an offset. The $+V_p$ was higer than the $-V_p$ by $\sim0.9V$. We solved this by connecting a 0.483V DC battery. The  result for obtaining DC value is shown in \textit{Figure~\ref{fig:rcsim}}. It is easy to see that RC circuit transforms \%50 duty cycle to 0V DC voltage. The DC voltage is indicated with CH2 probe.
+%\begin{figure}[t!]
+%\centering
+%\includegraphics[scale=0.1]{rcsim.jpg}
+%\caption{\label{fig:rcsim}Observed wave forms in corresponding nodes in  \textit{Figure~\ref{fig:dcgenerate}}.}
+%\end{figure}
+%
+%\subsection{Sensing Unit}
+%\begin{figure}[b!]
+%\centering
+%\includegraphics[scale=0.5]{sensingunit.png}
+%\caption{\label{fig:sensingunit}LM35 Sensing Unit.}
+%\end{figure}
+%Temperature sensing unit is analog temperature sensor \textit{(Figure~\ref{fig:sensingunit})}. It works with 12V $V_s$ and one pin goes to ground. $V_{out}$ is 0V for 0 degrees and it varies 10mV for each degree, namely, 500mV for 50\degree C and -500mV for (-50)\degree C. However, we are indicating the desired room temperature with a voltage level varying between -12V and 12V. To be able to compare these two datas, we should be able to observe them in same voltage scales. 
+%
+%For this purpose, we have used a noninverting amplifier. The basic equation for a noninverting amplifier is
+%\begin{equation}
+%V_{out}= \left(1 + \frac{R_9}{R_{10}}\right)V_{in}
+%\end{equation}
+%If we plug in the number used in our circuit
+%\begin{equation}
+%V_{out}= \left(1 + \frac{23k\ohm}{1k\ohm}\right)V_{in} = 24V_{in}
+%\end{equation}
+%
+%This means we will amplify the input by a factor of 24. Let's look the scaled new outputs obtained from LM35 by amplifying in \textit{Table~\ref{tab:LM35new}}. Simulation results are ols presented in \textit{Figure~\ref{fig:lm35cursor}}.
+%\begin{figure}[t!]
+%\centering
+%\includegraphics[scale=0.31]{lm35cursor.png}
+%\caption{\label{fig:lm35cursor}Simulation result for Custom \& Scaled output of LM35 Sensor.}
+%\end{figure}
+%\begin{table}[h!]
+%  \centering
+%  
+%  \begin{tabular}{c|c}
+%    $$Custom Outputs$$ & $$Scaled Outputs$$ \\ \hline
+%    500mV (50\degree C)	 &   12V \\ 
+%-500mV (-50\degree C) & -12V   \\ 
+%10mV(1\degree C) & 0.24V
+%  \end{tabular}
+%  \caption{Custom \& Scaled output of LM35 Sensor.}
+%  \label{tab:LM35new}
+%\end{table}
+%
+%\subsection{Control Unit}
+%Control unit is a composition of two subunits. First, decision unit gives a proper output according to required operation. Second, function unit includes a 5W stone resistor for heating operation, a 12V DC cooling fan for cooling operation and an RGB LED to indicate which operation is taking place.
+%
+%
+%\subsubsection{Decision Unit}
+%The most important part of the decision unit is an LM358 difference amplifier which is U5A in \textit{Figure~\ref{fig:decisionunit}}. It compares the voltage values coming from the outputs of the sensing unit and the temperature adjustment unit. Formula for a difference amplifier can be expressed by node analysis as
+%\begin{equation}
+%V_{out_{U5A}} = \left(\frac{R_9}{R_9+R_8}\right)\left(\frac{R_{11}+R_{12}}{R_{11}}\right)V_{SC2} - \frac{R_{12}}{R_{11}}V_{SC1}
+%\end{equation}
+%When $R_{8}=R_{11}$ and $R_{9}=R_{12}$ equation simplifes to
+%\begin{equation}
+%V_{out_{U5A}} = \left(\frac{R_{12}}{R_{11}}\right)(V_{SC2} - V_{SC1})
+%\end{equation}
+%
+%\begin{figure}[b!]
+%\centering
+%\includegraphics[scale=0.48]{decisionunit.png}
+%\caption{\label{fig:decisionunit}The Circuit Diagram of Decison Unit.}
+%\end{figure}
+%Let's plug in the numbers for our circuit
+%\begin{equation}
+%V_{out_{U5A}} = \left(\frac{27.5k\ohm}{2.2k\ohm}\right)(V_{SC2} - V_{SC1})=12.5(V_{SC2} - V_{SC1})
+%\end{equation}
+%So the U5A amplifies the voltage difference by a factor of 12.5. Some outputs and simulation results for sample $(V_{SC2} - V_{SC1})$ could be seen in \textit{Table~\ref{tab:decisionunit}} and \textit{Figure~\ref{fig:U5A}}.
+%\begin{table}[H]
+%  \centering
+%  \begin{tabular}{c|c}
+%    $$$V_{SC2} - V_{SC1}$$$ & $$U5A  Output$$ \\ \hline
+%    0.24V (1\degree C)	 &   3V \\ 
+%-0.24V (-1\degree C) & -3V   \\ 
+%0.48V (2\degree C) & 6V   \\ 
+%-0.48V (-2\degree C) & -6V   \\
+%0.72V (3\degree C) & 9V   \\
+%-0.96V (-4\degree C) & 12V($-V_{sat}$)   \\
+%1.2V(5\degree C) & 12V($+V_{sat}$) \\
+%-3.6V(-15\degree C) & -12V($-V_{sat}$)
+%  \end{tabular}
+%  \caption{Change in output of U5A according to $V_{SC2} - V_{SC1}$.}
+%  \label{tab:decisionunit}
+%\end{table}
+%\begin{figure}[h]
+% 
+%\begin{subfigure}{0.5\textwidth}
+%\includegraphics[scale=.4, width=.9\linewidth]{U5A1.png} 
+%\caption{}
+%\label{fig:subim1}
+%\end{subfigure}
+%\begin{subfigure}{0.5\textwidth}
+%\includegraphics[scale=.4,width=.9\linewidth]{U5A3.png}
+%\caption{}
+%\label{fig:subim2}
+%\end{subfigure}
+%
+%\caption{Sample simulations for the datas in \textit{Table~\ref{tab:decisionunit}}. }
+%\label{fig:U5A}
+%\end{figure}
+%
+%As we can see opamp U5A is in linear mode as long as
+%$$ \left|V_{SC2} - V_{SC1}\right|<0.96V$$
+%Another function of decision unit is to act accordingly if temperature difference between ambient and desired less than or equal to 2\degree C.  Mathematically $$ \Delta T \leq 2$$
+%If this is the case, unit should give a proper output so that neither cooling nor heating unit works.In other words, circuit passes to an idle mode. If $$ \Delta T >2$$ unit should give a proper output so that either cooling or heating units work accordingly. 
+%
+%For this purpose, \textit{U10A} is placed before heating unit, also, \textit{U7A} and \textit{U9A} are placed before cooling unit. What \textit{U10A} do is, it compares the output of \textit{U5A} with a \textit{6V} VCC. Since the output of U5A is 3V for every 1\degree C untill 4\degree C difference, 6V means a 2\degree C difference between the ambient and desired temperature level. If the difference is higher than 2\degree C, U10A outputs $+V_{sat}$ and heating unit starts to take the action. If not, heating unit doesn't work. The working principles of U7A and U9A is similar. U7A is an inverting amplifier. It decreases the voltage by a 10\% while changing the sign of voltage. Decreasing voltage level is a result of observation in simulation. The output of U5A sometimes exceeds the 6V level by 0.1V, so decreasing may prevent unwanted results. U9A compares the 10\% decreased voltage of U5A with a  6V. If it is less than 6V, meaning temperature difference is less than 2\degree C, cooler doesn't work. If not, cooler takes the action.
+%\subsubsection{Function Unit}
+%   Function unit cools the air and RGB LED emits the purple light to indicate cooling operation. The cooling operation takes place if the temperature of the ambient is higher than the desired temperature at least 2\degree C. On the other hand, the heating operation takes place if the temperature of the ambient is less than the desired temperature at least 2\degree C. However, if the temperature difference is neither greater than 0\degree C nor less than 0\degree C, the function unit goes to the idle mode. Through the all operations, we assume ambient is 27\degree C unless otherwise stated.
+%\paragraph{Heating Operation}
+%We have adjusted the circuit so that if the output voltage of the temperature adjustment unit is higher enough(i.e. $>2\degree C, 6V$) than the output voltage of the sensing unit, the heating operation starts. In this case, U9A gives $-V_{sat}$ as output whereas U10A gives $+V_{sat}$. Moreover, 1N4007 diodes are placed appropriately so that only parts related to the heating operation works. In heating operation, an $2.5\ohm$ stone resistor heats the ambient. The current isn't enough to heat the stone resistor, because, opamp U10 only outputs a 40mA current at most. We used BD135(Q1) transistor to increase the current through stone resistor. When a positive voltage applied to the base of the transistor, it immediately increases the current. As ambient warms up, an RGB LED emits the yellow light. In lab session we did use the same structure for heating operation. When we set the exactly \textit{Figure~\ref{fig:heating}} on the breadboard, we observed 1.5A current through stone resistor and we saved RGB LED last minute before burning out. So, we have changed the resistance values. They are tabulated in the \textit{Table~\ref{tab:manires}}. To obtain yellow light, we let RGB LED to emit only the red(LED3) and green(LED1) lights. The heating part of the circuit and the simulation result for the 80\% duty cycle(i.e. 9V difference, +3\degree C) could be seen in \textit{Figure~\ref{fig:heating} and Figure~\ref{fig:heatingmani}}. The \textit{Figure~\ref{fig:heatingmanisim}} also shows that circuit works for 80\% duty cycle.
+%\begin{figure}[t!]
+%\centering
+%\includegraphics[scale=0.6]{heating.png}
+%\caption{\label{fig:heating}The circuit diagram for Heating Operation.}
+%\end{figure}
+%\begin{table}[H]
+%  \centering
+%  \begin{tabular}{c|c}
+%    $$$Resistance$$$ & $$New Value(\ohm)$$ \\ \hline
+%    R15	 &   1.5k \\ 
+%    R16	 &   3k \\ 
+%R17 & 10k   \\ 
+%R18 & 2.2k   \\ 
+%R19 & 10k   \\
+%
+%  \end{tabular}
+%  \caption{New resistance values.}
+%  \label{tab:manires}
+%\end{table}
+%\begin{figure}[h]
+%\centering
+%\includegraphics[scale=0.6]{heatingmani.png}
+%\caption{\label{fig:heatingmani}The circuit simulation for 80\% duty cycle for Heating Operation.}
+%\end{figure}
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=0.115]{heatingmanisim.jpg}
+%\caption{\label{fig:heatingmanisim}The circuit for 80\% duty cycle on breadboard.}
+%\end{figure}
+%\vfill
+%\paragraph{Cooling Operation}
+%We have adjusted the circuit so that if the output voltage of the temperature adjustment unit is lower enough(i.e. $<2\degree C, -6V$) than the output voltage of the sensing unit, the cooling operation starts.In this case, U9A gives $+V_{sat}$ as output whereas U10A gives $-V_{sat}$. Moreover, 1N4007 diodes are placed appropriately so that only parts related to the heating operation works.
+%In cooling operation, a 12V DC fan works. The 40mA current output of opamp U9A is not enough to drive the fan. To solve this problem, we used BD135(Q2) transistor to get enough current through DC fan just like in heating operation as seen in the \textit{Figure~\ref{fig:cooling}}. As ambient cools down, the operation is indicated with a purple light. To obtain purple light emission we let RGB LED to emit only the red(LED3) and blue(LED2) lights.  The simulation result for the 74\% duty cycle(i.e. -9V difference, -3\degree C) could be seen in \textit{Figure~\ref{fig:coolingmani}}. The working circuit for edited resistance values(\textit{Table~\ref{tab:manires}}) and 74\% duty cycle can be seen in \textit{Figure~\ref{fig:coolingmanisim}}.
+%    
+%
+%     
+%\begin{figure}[t!]
+%\centering
+%\includegraphics[scale=0.62]{cooling.png}
+%\caption{\label{fig:cooling}The circuit diagram for Cooling Operation.}
+%\end{figure}
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=0.55]{coolingmani.png}
+%\caption{\label{fig:coolingmani}The circuit simulation for 74\% duty cycle for Cooling Operation.}
+%\end{figure}
+% \vspace*{5cm} 
+% \vfill
+%     
+%
+%\begin{figure}[t]
+%\centering
+%\includegraphics[scale=0.084]{coolingmanisim.jpg}
+%\caption{\label{fig:coolingmanisim}The circuit for 74\% duty cycle on breadboard.}
+%\end{figure}
+% % Fill the rest of the page with whitespace
+%
+%\vspace{\fill}
+%
+%\paragraph{Idle Mode}
+%We have adjusted the circuit so that if the difference between the output voltage of the temperature adjustment unit and the output voltage of the sensing unit is neither greater than 2\degree C(6V) nor less than -2\degree C(-6V), the circuit goes into the idle state. In other words, both stone resistor and DC fan doesn't work and RGB LED doesn't emit any light. In idle state,only op amps,resistors and potentiometers consume power which is neglibile when compared with the power consumption of the stone resistor or the DC fan. The circuit in idle mode could be seen in \textit{Figure~\ref{fig:idlemanisim}}.
+%\vfill
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=0.75]{idlemani.png}
+%\caption{\label{fig:idlemani}The circuit simulation for 78\% duty cycle for Idle Mode.}
+%\end{figure}
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=0.10]{idlemanisim.jpg}
+%\caption{\label{fig:idlemanisim}The circuit for 78\% duty cycle on breadboard.}
+%\end{figure}
+%\section{Power Consumption}
+%We will analyze the power consumption in the circuit in three states, namely, cooling, idle and heating. The calculation can be done by multiplying voltage(V) and current(A) indicated in Agilent DC Power Supply screen. The values for three states are tabulated in \textit{Table~\ref{tab:power}}.
+%\begin{table}[h!]
+%  \centering
+%  
+%  \begin{tabular}{c|c|c|c}
+%    &$$Voltage(V)$$ & $$Current(A)$$&$$Power(W)$$ \\ \hline
+%    Cooling Operation & 12 & 0.226 & 2.712 \\ \hline
+%    Idle State & 12 & 0.038 & 0.456 \\ \hline
+%    Heating Operation & 12  & 0.228 & 2.736
+%  \end{tabular}
+%  \caption{Power consumption in different states.}
+%  \label{tab:power}
+%\end{table}
+%\begin{table}[h!]
+%  \centering
+%  
+%  \begin{tabular}{c|c|c|c}
+%    &$$Number of used$$ & $$Unit Price (TL/unit)$$ & $$Cost(TL)$$ \\ \hline
+%    Various Resistors & 33 & 0.021 & 0.693 \\ \hline
+%    Stone Resistor & 1 & 0.25 & 0.25 \\ \hline
+%    Potentiometers & 2  & 0.53 & 1.06 \\ \hline
+%    Capacitors & 6  & 0.0665 & 0.399 \\ \hline
+%    1N4007 Diode & 2  & 0.049 & 0.098 \\ \hline
+%    RGB LED & 1  & 3.5 & 3.5 \\ \hline
+%    LM35 Sensor & 1  & 5.25 & 5.25 \\ \hline
+%    LM358 Opamp & 6 &  0.39 & 2.34 \\ \hline
+%    BD135 Transistor & 2  & 0.39 & 0.78 \\ \hline
+%    Heat Sink & 2  & 0.85 & 1.7 \\ \hline
+%    12V DC fan & 1  & 5.18 & 5.18 \\ \hline
+%    Breadboard & 1  & 39.20 & 39.20 \\ \hline
+%    Jumper Kit & 1  & 14.00& 14.00 \\ \hline
+%     &   & $$TOTAL$$& 74.45 
+%  \end{tabular}
+%  \caption{The cost analysis of the whole project.}
+%  \label{tab:cost}
+%\end{table}
+%\section{Cost Analysis}
+%We have used several circuit components to build analog air conditioner system. The datas are tabulated in \textit{Table~\ref{tab:cost}}. Some components burnt out during the project, however, they are not included in the cost analysis.
+%
+%\section{Overview of the Circuit}
+%So far, we have analyzed the whole circuit part by part. The changes during the experiments were indicated and tabulated. the overall schematic of the circuit could be seen in \textit{Figure~\ref{fig:circuitoverview}} with block diagrams. The resulting work on breadboard is also presented in \textit{Figure~\ref{fig:circuitoverviewbread}}.
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=0.12]{circuitoverviewbread.jpg}
+%\caption{\label{fig:circuitoverviewbread}The circuit overview on breadboard.}
+%\end{figure}
+%\vfill 
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=0.5]{circuitoverview.png}
+%\caption{\label{fig:circuitoverview}The overall circuit schematic.}
+%\end{figure}
+%
+%
+%\section{Conclusion}
+%In this project we learnt how to create PWM with varying duty cycle without using integrated circuits in several ways. We made choices according to our design, the suitable one. We acquaired a wider understanding of some circuits and concepts. We utilized from most of the opamp circuits according to purpose of the operation. For instance, we faced with the load effect and implemented a buffer opamp that part which solved the problem. We have designed a decision unit which we used  a difference amplifier. We learnt how to use and how to choose RGB LED. It makes a big difference to choose suitable RGB LED, common anode or cathode. We dealt with low currents by using npn transistors. On the other hand, we realized that not everything in real life behaves like in simulation. So, we had to make adjustments on the values to get desired outputs. To sum up, we learnt how to choose suitable circuits, how to debug the circuit by changing components, values, structures. We have understood the importance of developing new ideas and having visionary perspective when building and setting up the circuit.
+
+
+\end{document}
