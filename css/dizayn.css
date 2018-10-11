@@ -1,6 +1,6 @@
 body { 
 	
-	background-color: #d1c2b3;
+	background-color: white;
 	min-width: 700px;
 	font-family: 'Barrio', cursive;
 	margin: 0px;
@@ -41,12 +41,12 @@ header h1 {
 }
 
 .background{
-	background-color: #d3c9be;
+	background-color: white
 	min-height: 50%;
 }
 
 .container_12{
-background-color: #eae5e1;
+background-color: #eae5e1
 
 }
 
