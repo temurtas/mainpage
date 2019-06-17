@@ -1,0 +1,1501 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University Assignment Title Page 
+% LaTeX Template
+% Version 1.0 (27/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+
+% Instructions for using this template:
+% This title page is capable of being compiled as is. This is not useful for 
+% including it in another document. To do this, you have two options: 
+%
+% 1) Copy/paste everything between \begin{document} and \end{document} 
+% starting at \begin{titlepage} and paste this into another LaTeX file where you 
+% want your title page.
+% OR
+% 2) Remove everything outside the \begin{titlepage} and \end{titlepage} and 
+% move this file to the same directory as the LaTeX file you wish to add it to. 
+% Then add \input{./title_page_1.tex} to your LaTeX file where you want your
+% title page.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\title{Title page with logo}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{gensymb} % this could be problem
+\usepackage{float}
+\usepackage{natbib}
+\usepackage{fancyref}
+\usepackage{subcaption}
+
+\usepackage{pythonhighlight}
+
+\usepackage{xcolor}
+\usepackage{listings}
+
+\definecolor{mGreen}{rgb}{0,0.6,0} % for python
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+
+
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue for matlab
+\definecolor{mylilas}{RGB}{170,55,241}
+
+\lstdefinestyle{CStyle}{
+    commentstyle=\color{mGreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{mGray},
+    stringstyle=\color{mPurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+
+
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+            {-2.5ex\@plus -1ex \@minus -.25ex}%
+            {1.25ex \@plus .25ex}%
+            {\normalfont\normalsize\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to
+\setcounter{tocdepth}{4}    % how many sectioning levels to show in ToC
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+\includegraphics[scale=0.3]{odtuee.png}\\[1cm]
+% Include a department/university logo - this will require the graphicx package
+ 
+%----------------------------------------------------------------------------------------
+
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE Middle East Technical University}\\[1.5cm] % Name of your university/college
+\textsc{\Large Department of Electrical and Electronics Engineering }\\[0.5cm] % Major heading such as course name
+ % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+
+{ \huge \bfseries \large EE300 Summer Practice I \\ Report}\\[0cm] % Title of your document
+\HRule \\[1cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.35\textwidth}
+\begin{flushleft} \large
+\textbf{Student Name:} \\
+ \textit{Halil Temurtaş} \\
+\textbf{Student ID:} \\ 
+ \textit{2094522} \\
+\textbf{SP Beginning Date:} \\
+ \textit{03.07.2017} \\
+\textbf{SP End Date:}\\
+ \textit{28.07.2017}
+
+
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.6\textwidth}
+\begin{flushright} \large
+\textbf{SP Company Name:} \\ 
+ \textit{TÜRKSAT A.Ş.} \\
+\textbf{SP Company Division:} \\ 
+ \textit{Directorate of Satellite Programming} \\
+\textbf{Supervisor Engineer:} \\
+ \textit{Ömer Eren Can Koçulu} \\
+\textbf{SE Contact Info:} 
+ \textit{ekoculu@turksat.com.tr} 
+\end{flushright}
+\end{minipage}\\[1cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large .. .. 2017}\\[1cm] % Date, change the \today to a set date if you want to be precise
+
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+
+\tableofcontents
+\newpage
+
+
+%\begin{abstract}
+%Your abstract.
+%\end{abstract}
+
+\section{Introduction}
+\-
+\indent I have performed my summer practice in TÜRKSAT A.Ş. (Türksat Satellite Communications and Cable TV Operations Company - Türksat Uydu Haberleşme Kablo TV ve İşletme A.Ş). It is the sole communications satellite operator in Turkey. My internship lasted 20 days. Ömer Eren Koçulu, a mechatronics engineer in TURKSAT was our supervisor and he managed our internship program. 
+
+	My internship started with an orientation program. The company and how works are handled were presentesd to new interns. After that, the programs and tecniques we would use in our internship and our work life were introduced.  
+Following this introduction, a project is assigned to us as a team. Our team consisted of me and two mechatronics engineering students, Abdullah Taha İzmir and Duran Arif Göçer.  
+
+	The project was about solar panels that can follow sun to increase its efficiency. In order to achieve this, we were recommended to use Raspberry Pi instead of Arduino since other team were using Arduino in their project. Moreover, we could compare the efficiency of using Raspberry and Arduino at the end. For controlling Raspberry Pi, I learnt the basics of Python and Linux enviroment. Lastly, I studied on Matlab, MS Sharepoint after finishing project.
+
+	In this report, I start with an introduction  \\
+	...  \\
+	...  \\
+	...  \\
+	...  \\
+	...  \\
+	...  \\
+	...  \\
+	...  \\
+	...  \\
+	...  \\
+	...  \\
+	...  \\
+
+
+\section{Description of the Company}
+In this chapter, I will introduce the company in four parts:
+\begin{enumerate}
+\item Company Name
+\item Company Location
+\item General Description of the Company
+\item A Brief History of the Company
+\end{enumerate}
+
+
+\subsection{Company Name}
+\-
+\indent TÜRKSAT A.Ş. (Türksat Satellite Communications and Cable TV Operations Company - Türksat Uydu Haberleşme Kablo TV ve İşletme A.Ş).
+
+
+\subsection{Company Location}
+\-
+\\
+\textbf{ Address-1: Ana Kampüs:} Konya Yolu 40 KM. Gölbaşı/Ankara/Türkiye 
+\\
+\\
+\textbf{ Address-2: Gazi Teknokent:} Bahçelievler Mahallesi, Gazi Ünv. Gölbaşı Yerleşkesi No:24, 06830 Gölbaşı/Ankara/Türkiye 
+\\
+\\
+\textbf{ Phone:} +90 312 615 3000
+\\
+\\
+\textbf{ Fax:} +90 312 499 5115
+
+
+
+\subsection{General Description of the Company}
+\*
+\indent Türksat Satellite Communications and Cable TV Operations Company is the sole communications satellite operator in Turkey. It was established on 21 December 1990 as a state-owned company named Türksat Milli Haberleşme Uyduları (Türksat National Communications Satellites) in Gölbaşı, Ankara Province; eventually incorporating the satellite services of Türk Telekomünikasyon A.Ş. and becoming Türksat A.Ş. on 22 July 2004. Türksat A.Ş. also owns 100\% of the shares of Eurasiasat S.A.M., jointly established as a spin-off company with Aérospatiale in 1996 to manufacture and launch Turksat 2A (Eurasiasat 1) in 2001.
+\subsection{The Organizational Chart of the Company}
+\-
+\indent
+The organizational chart of TÜRKSAT can be seen in Figure 1.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{odtuee.png}\\
+\caption{\label{fig:cooling}The Organizational Chart of TÜRKSAT }
+\end{figure}
+
+\subsection{A Brief History of the Company}
+\begin{itemize}
+\item \textbf{1968} 
+\subitem The Chief Engineering of Satellite Telecommunications Group was established within the General Directorate of PTT. 
+\item \textbf{ August 11th, 1994 } 
+\subitem Turkey's Türksat 1B satellite was launched and put successfully into 42° East orbit.
+\item \textbf{ July 10th, 1996 }
+\subitem Turkey's second satellite, Türksat 1C, was launched and put into 31.3° E orbit. 
+\item \textbf{ January 11th, 2001 }
+\subitem Türksat 2A (Eurasiasat 1) satellite manufactured by Eurasiasat company established in partnership with Türk Telekom and Alcatel company launched by Ariane 4 rocket from Kourou Base in South America. 
+\item \textbf{ July 22nd, 2004 } 
+\subitem In order to conduct satellite communication services, which was previously conducted by Türk Telekomünikasyon A.Ş., under a new company, \textit{ \textbf{ Türksat A.Ş. }} was founded by Law no. 5189. 
+\item \textbf{ June 13th, 2008 }
+\subitem Türksat 3A satellite launched from the French Guiana on June 13th, 2008 at 01:05 by Ariane 5 rocket and put into 42.0° East orbit. 
+\item \textbf{ February 14th, 2014  }
+\subitem Turksat 4A communication satellite launched by Proton rocket from Baikonur Cosmodrome in Kazakhstan. 
+\item \textbf{  October 16th, 2015 }
+\subitem Turksat 4B communication satellite launched by Proton Breeze M vehicle from Baikonur Cosmodrome in Kazakhstan and put into 50° East orbit. 
+\end{itemize}
+
+
+\section{Orientation \& Useful Programs}
+\-
+\indent Throughout my summer practice, I used several techniques and useful programs recommended by our supervisor. 
+	
+	In this section, I will explain these techniques and programs that I found very useful.
+
+\subsection{Pomodoro Technique}
+\-
+\indent The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. The technique aims to increase efficiency by breaking work hours into several intervals called pomodoro. Originally 25 minutes in length, separated by short breaks, the lenght of this intervals can be changed people's personalities. For example, I have used 40 minutes lenght pomodoros, 5 minutes length short breakes and 1 hour lenght long break after 4 or 5 pomodoros.  Pomodoros (tomatos in Italian) are named after the tomato-shaped kitchen timer that Cirillo used as a university student.
+
+	The tecnique is closely related to software design concepts such as incremental development and iterative and timeboxing, and has been adopted in pair programming contexts.
+\\
+\\
+\textbf{ There are six steps in the technique: }
+\textit{
+\begin{enumerate}
+\item Decide on the task to be done.
+\item Set the pomodoro timer (traditionally to 25 minutes).
+\item Work on the task until the timer rings.
+\item After the timer rings put a checkmark on a piece of paper.
+\item If you have fewer than four checkmarks, take a short break (3–5 minutes), then go to step 2.
+\item After four pomodoros, take a longer break (15–30 minutes), reset your checkmark count to zero, then go to step 1.
+\end{enumerate}
+}
+
+	A goal of the technique is to reduce the impact of internal and external interruptions on focus and flow. A pomodoro is indivisible which means it can not be interrupted. When interrupted during a pomodoro, either the other activity must be recorded and postponed (inform – negotiate – schedule – call back) or the pomodoro must be abandoned.
+
+\subsubsection{Pomotodo App}
+\- \indent
+	Although the creator of this technique encourages a low-tech approach that includes using a mechanical timer, paper and pencil. We have used more technological solutions called Pomotodo App in my summer practice.
+
+	The reason behind this decision was to increase efficiency even mre by using Pomotodo's some key features like built-in to-do list \& category tracking system.
+	
+	The stages of planning, tracking, recording, processing and visualizing are fundamental to the technique. In the planning phase tasks are prioritized by recording them in a "To Do Today" list. This enables users to estimate the effort tasks require. As pomodoros are completed, they are recorded, adding to a sense of accomplishment and providing raw data for self-observation and improvement. For that purpose, I have used Pomotodo's builtin to-do list that enables user not just tracking its work but allows user to categorise work by some cathegories. Some of my to-do list objects can be seen in figure XX.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{odtuee.png}\\
+\caption{\label{fig:cooling} My To Do List in Pomotodo Web App  }
+\end{figure}
+	
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{odtuee.png}
+\caption{\label{fig:cooling} My Pomodoro History of July 12th   }
+\end{figure}
+
+	As can be seen in figure XX, I have used some hashtags to categorise the work I have done. As can be understood from figure, 10 pomodoros were completed at July 12th. As I mentioned earlier, I have tried to use my pomodoro lenght as a 40 minutes and short breaks as 5 minutes. After 5 completed pomodoros, a long break was taken. After using this hashtags, we can ingestive our work statistic for desired times. For instance, throughout my summer practice 66\% of my time was spent on training. Further statics can be seen at figure XX.										
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{odtuee.png}\\[1cm]
+\caption{\label{fig:cooling} Some statics about my summer practice   }
+\end{figure}										
+	
+	  
+
+\subsection{Database Structure}
+\-
+\indent A database is an organized collection of data. It is the collection of schemas, tables, queries, reports, views, and other objects. The data are typically organized to model aspects of reality in a way that supports processes requiring information, such as modelling the availability of rooms in hotels in a way that supports finding a hotel with vacancies.
+
+	Formally, a "database" refers to a set of related data and the way it is organized. Access to this data is usually provided by a "database management system" (DBMS) consisting of an integrated set of computer software that allows users to interact with one or more databases and provides access to all of the data contained in the database (although restrictions may exist that limit access to particular data). The DBMS provides various functions that allow entry, storage and retrieval of large quantities of information and provides ways to manage how that information is organized.
+Because of the close relationship between them, the term "database" is often used casually to refer to both a database and the DBMS used to manipulate it.
+Outside the world of professional information technology, the term database is often used to refer to any collection of related data (such as a spreadsheet or a card index). This article is concerned only with databases where the size and usage requirements necessitate use of a database management system.
+
+\subsubsection{Airtable}
+	Airtable is a spreadsheet-database hybrid i.e., the features of a database are applied to a spreadsheet. The fields in an Airtable table are similar to a cell of a spreadsheet, but have types check-boxes, phone numbers, and drop-down lists, and can reference file attachments like images.
+Users can create a database, set up field types, add records, link tables, collaborate with a team, sort the records based on a field and publish views to external websites. When an Airtable database is created, it is automatically hosted to the cloud. The values in the fields are updated real time.
+
+	Airtable has six basic components:
+
+Bases: All the information needed to create a project is contained in a Base. Bases can be built from existing templates provided by Airtable. In addition, they can also be built from scratch, from a spreadsheet or from an existing Base.
+
+Tables: A table is similar to an excel spreadsheet. A Base is a collection of tables.
+
+An example table in a restaurant Base.
+
+Views: Views are how we can see a table. Views can be saved for future purposes.
+
+Fields: Each entry in a Table is a field. They are not just restricted to hold text. Airtable currently offers 16 basic field types. These are: single-line texts, long text articles, file attachments, check-boxes, single select from drop-down list, multiple-selects from drop-down lists, date and time, phone numbers, email ids, URLs, numbers, currency, percentage, auto-number, formulae and barcodes.
+
+Records: Each row of a Table is a Record.
+
+Team: Team is a collection of Bases in Airtable.
+For example, in the adjacent restaurant template which contains all the information we need to store about the restaurants. We can have a ‘Restaurants’ table to store the names of restaurants along with information about their addresses, ratings, menus, etc. We can have a view to show our favourite restaurants. Each record in the Restaurants table is kept for a particular restaurant. ‘Rating’ can be kept as a field, to help generate ‘My favourite restaurants’ view.
+
+
+
+\subsection{Wiki Pages}
+
+A wiki  is a website on which users collaboratively modify content and structure directly from the web browser. In a typical wiki, text is written using a simplified markup language and often edited with the help of a rich-text editor.
+
+A wiki is run using wiki software, otherwise known as a wiki engine. A wiki engine is a type of content management system, but it differs from most other such systems, including blog software, in that the content is created without any defined owner or leader, and wikis have little implicit structure, allowing structure to emerge according to the needs of the users.
+
+There are dozens of different wiki engines in use, both standalone and part of other software, such as bug tracking systems. Some wiki engines are open source, whereas others are proprietary. Some permit control over different functions (levels of access); for example, editing rights may permit changing, adding or removing material. Others may permit access without enforcing access control. Other rules may be imposed to organize content.
+\\
+\\
+\subsubsection{Confluence  Wiki}
+
+
+\begin{figure}[H]
+\includegraphics[scale=0.3]{odtuee.png}\\[1cm]
+\caption{\label{fig:cooling}Body }
+\end{figure}
+
+
+There are dozens of different wiki engines in use, both standalone and part of other software, such as bug tracking systems. Some wiki engines are open source, whereas others are proprietary. Some permit control over different functions (levels of access); for example, editing rights may permit changing, adding or removing material. Others may permit access without enforcing access control. Other rules may be imposed to organize content.
+\\
+
+\subsection{V-Model \& Agile Methodology}
+\-
+\subsubsection{V-Model}
+The V-model is a graphical representation of a systems development lifecycle. It is used to produce rigorous development lifecycle models and project management models. The V-model falls into three broad categories, the German Das V-Modell, a general testing model and the US government standard.
+The V-model summarizes the main steps to be taken in conjunction with the corresponding deliverables within computerized system validation framework, or project life cycle development. It describes the activities to be performed and the results that have to be produced during product development.
+
+
+\begin{figure}[H]
+\includegraphics[scale=0.3]{odtuee.png}\\[1cm]
+\caption{\label{fig:cooling}V-Model }
+\end{figure}
+
+
+The left side of the "V" represents the decomposition of requirements, and creation of system specifications. The right side of the V represents integration of parts and their validation. However, Requirements need to be validated first against the higher level requirements or user needs. Furthermore, there is also something as validation of system models (e.g. FEM). This can partially be done at the left side also. To claim that validation only occurs at the right side may not be correct. The easiest way is to say that verification is always against the requirements (technical terms) and validation always against the real world or the user needs
+
+
+
+
+\subsubsection{Agile Methodology}
+
+Agile software development describes a set of values and principles for software development under which requirements and solutions evolve through the collaborative effort of self-organizing cross-functional teams. It advocates adaptive planning, evolutionary development, early delivery, and continuous improvement, and it encourages rapid and flexible response to change.
+The term agile (sometimes written Agile) was popularized by the Agile Manifesto, which defines those values and principles. Agile software development frameworks continue to evolve, two of the most widely used being Scrum and Kanban.
+
+\paragraph{Roles}
+\textbf{Product Owner} :  The team leader, the person responsible for tracking the process. \\
+\textbf{Scrum Master} : The person responsible for the correct execution of the process. \\
+\textbf{Hardware Engineer} : The person or people that are responsible for designing and implementing the electrical and electronics hardware.\\
+\textbf{ Software Engineer} : The person or people that are responsible \\ 
+\textbf{Structure Engineer} : The person or people that are responsible  \\
+\textbf{Test Engineer} : The person or people that are responsible 
+\subsection{Version Control with Git}
+\-
+\indent Git is a version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for source code management in software development, but it can be used to keep track of changes in any set of files. As a distributed revision control system it is aimed at speed, data integrity, and support for distributed, non-linear workflows.
+Git was created by Linus Torvalds in 2005 for development of the Linux kernel, with other kernel developers contributing to its initial development. Its current maintainer since 2005 is Junio Hamano.
+As with most other distributed version control systems, and unlike most client–server systems, every Git directory on every computer is a full-fledged repository with complete history and full version tracking abilities, independent of network access or a central server.
+Like the Linux kernel, Git is free software distributed under the terms of the GNU General Public License version 2.
+
+\subsubsection{Github}
+
+\subsubsection{Bitbucket}
+
+Bitbucket is a web-based hosting service that is owned by Atlassian, used for source code and development projects that use either Mercurial (since launch) or Git (since October 2011) revision control systems. Bitbucket offers both commercial plans and free accounts. It offers free accounts with an unlimited number of private repositories (which can have up to five users in the case of free accounts) as of September 2010. Bitbucket integrates with other Atlassian software like Jira, HipChat, Confluence and Bamboo.
+It is similar to GitHub, which primarily uses Git. Bitbucket has traditionally tailored itself towards helping professional developers with private proprietary code, especially since being acquired by Atlassian in 2010. In September 2016, Bitbucket announced it had reached 5 million developers and 900,000 teams on its platform. Bitbucket has 3 deployment models: Cloud, Bitbucket Server and Data Center.
+
+sdfdfsfdsf
+
+
+
+
+\section{Solar Tracker System Project }
+\-
+\indent In my summer practice, I was assigned for a project with a team. For the project, we were expected to built a solar panel system that can follow the sun light to maxinize its efficiency. 
+
+\subsection{Planning \& Researching}
+\-
+\indent As planning the project, we used V-model and Agile Methodology (Scrum) in order to increase efficiency and reduce time spent on the project. As mentioned earlier, using V-model required using another program. Therefore, we decided to use Airtable for tracking system requirements, subsystem requirements, tests and so on. The Interface of Airtable \& System Requirements can be seen at figure X.
+
+
+\subsubsection{System Requirements}
+\begin{figure}[H]
+\includegraphics[scale=0.3]{odtuee.png}\\[1cm]
+\caption{\label{fig:asr}The Interface of Airtable \& System Requirements }
+\end{figure}
+\-
+\indent Constructing V-model required to specify the requirements that defines the project. For the system requirements, we considered the most basic requirements that the project must fulfil. For instance, being portable was a primary purpose for our project and it became one system requirements. From the nature of V-model, every system requirement has one or more subsystem requirement and system requirement test that will be explained later. Our project had 11 system requirements as can be seen at \textit{Figure~\ref{fig:asr}}.
+
+\subsubsection{Subsystem Requirements}
+\- \indent
+	As mentioned just above, every system requirement has one or more subsystem requirement that detail the requirement. As the V-model suggests, for fulfilling the system requirements, its subsystem requirements must be fulfilled first. These subsystem requirements can be considered as secondary goals that the project trying to accomplish in order to succeed its primary goals. As can be seen at \textit{Figure~\ref{fig:ssr}}, we had 14 subsystem requirements for finalizing the project.
+\begin{figure}[H]
+\includegraphics[scale=0.3]{odtuee.png}\\[1cm]
+\caption{\label{fig:ssr}Body }
+\end{figure}
+
+
+\subsubsection{Component Requirements}
+
+\textit{Figure~\ref{fig:cr}}
+
+\begin{figure}[H]
+
+\includegraphics[scale=0.3]{odtuee.png}\\[1cm]
+\caption{\label{fig:cr}Body }
+\end{figure}
+ 
+\subsubsection{Components}
+
+\textit{Table~\ref{tab:comps}}
+
+\begin{table}[H]
+  \centering
+  
+  \begin{tabular}{c|c|c|c}
+    &$$Number of used$$ & $$Unit Price (TL/unit)$$ & $$Cost(TL)$$ \\ \hline
+    Servo Motor & 2 & 53.74 & 107.48 \\ \hline
+    Microcontroller & 1 & 158.9 & 158.90 \\ \hline
+    Additional microcontroller & 1  & 50.00 & 50.00 \\ \hline
+    Solar Panel & 2  & 23.18 & 46.36 \\ \hline
+    LDR & 4  & 1.26 & 5.04 \\ \hline
+    Jumper & 80  & 0.12 & 9.60 \\ \hline
+    Somun & 10 & 0.01 & 0.14 \\ \hline
+    USB Voltage Regulator & 1 &  7.21 & 7.21 \\ \hline
+    Pil yuvası & 1  & 1.60 & 1.60 \\ \hline
+    Vida & 20  & 0.07 & 1.34 \\ \hline
+    Standoff & 16  & 0.19 & 3.04 \\ \hline
+    Makaron (1 meter) & 1  & 1.26 & 1.26 \\ \hline
+    Dış malzeme & 2  & 15.00& 30.00 \\ \hline
+     &   & $$TOTAL$$& 421.97 
+  \end{tabular}
+  \caption{The components used in the project.}
+  \label{tab:comps}
+\end{table}
+
+
+
+   
+\subsection{Training}
+
+\textit{Table~\ref{tab:roles}}
+
+\begin{table}[h!]
+  \centering
+ 
+    \begin{tabular}{c|c|c}
+       &$$Roles$$ & $$Responsible Person$$ \\ \hline
+       1 & ~~~~Product Owner & Halil Temurtaş  \\ \hline
+       2 & ~~~~Scrum Master  & Eren Koçulu  \\ \hline
+       3 & ~~Hardware Engineer & ~~~~Taha İzmir \& Halil Temurtaş \\ \hline
+       4 & Software Engineer & ~~~~Arif Göçer \& Halil Temurtaş  \\ \hline
+       5 & ~~~~Structure Engineer & ~~~~Taha İzmir \&  Arif Göçer \\ \hline
+       6 & ~~~~Test Engineer & ~~~~Arif Göçer \& Halil Temurtaş 
+      
+  \end{tabular}
+  \caption{Roles}
+  \label{tab:roles}
+\end{table}
+
+
+\subsubsection{Training on Python}
+
+In order to use Raspberry Pi efficiently, I studied Python for a while from a couple of web sites. I mainly focused on Python 3 since it’s more up to date than previous version. I tried different codes on Pycharm for Windows before meeting with Linux terminal and Raspberry. Pycharm is one of the most recommended Python IDE’s by communities.  Here are some of my very first attempts to use Python.
+\\
+\paragraph{Basics }
+
+\begin{python}
+# Using Python fort he first time!! 
+print("Hello Intership!!!")  
+
+x = 1 
+if x == 1:
+	# indented four spaces, indents works as brackets in C!
+    print("x is 1.")
+if x==3:
+    print(23)
+
+myint = 7
+print(myint)  # use '#' for commenting 
+
+# A sample script that uses lists:
+
+numbers=[]	# creates a list called numbers.
+numbers.append(1)	# adds '1' to numbers as first element.
+numbers.append(2)
+numbers.append(3)
+
+strings=[]  # creates a list called strings.
+strings.append("hello")
+strings.append("world")
+
+names = ["Ali", "Ahmet", "Ayse"]	# adds Ali, Ahmet and Ayse to names. 
+
+second_name=names[1]
+
+print(numbers)	# prints [1, 2, 3]
+print(strings)	# prints ['hello', 'world']
+print("The 2nd name on the name list is %s" %second_name)     # prints the second name on the names list is Ahmet!
+
+
+
+\end{python}
+
+\-
+\\
+\-
+    
+\begin{python}
+astring = "Hello world!" 
+
+print(astring.index("o"))	# prints 4, since o appears firstly at 4th digit.
+print(astring.count("l"))	# prints 3, since l appears three times 
+print(astring[3:7])		# prints lo w, starting from 3rd element to 7th element (7th is not included!) 
+print(astring[3:7:2])	# prints l, starting from 3rd element to 7th element skipping one character. 
+print(astring[::-1])    # prints the string reverse.           
+print(astring.upper())  # prints the string with upper cases.  
+print(astring.lower())  # prints the string with lower cases.  
+print(astring.startswith("Hello"))	# Returns True  
+print(astring.endswith("asdfasdfasdf"))	# Returns False     
+
+\end{python}
+\paragraph{Using Conditions}
+
+
+\begin{python}
+if  < statement is="" true="" > : 
+    < do something="" >
+    .... 
+    ....
+elif < another statement="" is="" true="" > :  
+     < do something="" >
+    ....
+    .... 
+else:
+     < do something="" >
+    ....
+    ....
+\end{python}
+\paragraph{Using Loops} 
+\begin{python}
+temurtas = [5, 8, 3, 6] 
+for halil in temurtas: 
+    print(halil)	# prints every element in temurtas one by one in every loop. 
+print(temurtas)	# prints [5, 8, 3, 6]
+\end{python}
+\begin{python}
+count=0  
+while (count<5) :
+    print(count)
+    count +=1
+else:
+    print("count value reached %d" %(count))
+\end{python}
+\paragraph{Defining Functions}
+\begin{python}
+def sum_two_numbers(a, b):   # Defining function  
+    return a + b 
+x = sum_two_numbers(1,2)	# after this line x will hold the value 3! 
+print("x=%s" %x)	#prints x=3
+\end{python}
+\paragraph{Defining Classes}
+\begin{python}
+class Vehicle:	# define the Vehicle class 
+    name = ""
+    kind = "car"
+    color = ""
+    value = 100.00
+
+def description(self):
+    desc_str = "%s is a %s %s worth $%.2f." %(self.name,	 self.color, self.kind, self.value)
+    return desc\_str
+
+car1 = Vehicle() 
+car1.name = "Ferrari"
+car1.color = "red" 
+car1.kind = "sport" 
+car1.value = 600000.00 
+
+car2 = Vehicle() 
+car2.name = "Jeep" 
+car2.color = "blue" 
+car2.kind = "SUV" 
+car2.value = 10000.00 
+
+print(car1.description()) # prints Ferrari is a red sport worth $600000.00. 
+print(car2.description()) # prints Jeep is a blue SUV worth $10000.00.  
+\end{python}
+
+	As I went into detail, Python is not very difficult language to learn. In fact, aside from some indent mistake using it is very simple and clean yet powerfull in various applications.
+
+\subsubsection{Training on Raspberry Pi}
+\begin{python}
+x==4	# first line of code on raspberry pi
+if x==4		
+    print("evet") 
+\end{python}
+
+\paragraph{Training on LEDs}
+\begin{python}
+import RPi.GPIO as GPIO 
+import time 
+
+GPIO.setmode(GPIO.BCM) 
+GPIO.setwarnings(False) 
+GPIO.setup(17,GPIO.OUT) 
+GPIO.setup(4,GPIO.OUT) 
+
+while True: 
+    print "LED on" 
+    GPIO.output(17,GPIO.HIGH)  
+    GPIO.output(4,GPIO.LOW)  
+    time.sleep(1)  
+    print "LED off"  
+    GPIO.output(17,GPIO.LOW)  
+    GPIO.output(4,GPIO.HIGH)  
+    time.sleep(1)  
+\end{python}
+\paragraph{Training on LDRs}
+\begin{python}
+from gpiozero import LightSensor, Buzzer  
+
+ldr = LightSensor(4)   
+ldr2 = LightSensor(17) 
+ldr3 = LightSensor(27) 
+ldr4 = LightSensor(22) 
+
+bir=ldr.value+ldr2.value 
+iki=ldr3.value+ldr4.value 
+uc=ldr.value+ldr3.value 
+dort=ldr2.value+ldr4.value 
+
+while True:  
+    print("ldr= %s" %ldr.value)   
+    print("ldr2= %s" %ldr2.value)  
+    print("ldr3= %s" %ldr3.value)  
+    print("ldr4= %s" %ldr4.value)
+    print("bir= %s" %bir)  
+    print("iki= %s" %iki)  
+    print("uc= %s" %uc)   
+    print("dort= %s" %dort)  
+\end{python}
+\paragraph{Training on Servo Motors with Raspberry Pi}
+\begin{python}
+# Servo Control 
+import time  
+import wiringpi  
+
+wiringpi.wiringPiSetupGpio()  # use 'GPIO naming
+wiringpi.pinMode(18, wiringpi.GPIO.PWM_OUTPUT)  # set pin 18 to be a PWM output
+wiringpi.pwmSetMode(wiringpi.GPIO.PWM_MODE_MS)	# set the PWM mode to milliseconds stype
+wiringpi.pwmSetClock(192)  # divide down clock
+wiringpi.pwmSetRange(2000)  
+
+delay_period = 0.01  
+
+while True:  
+    for pulse in range(50, 250, 1):  
+        wiringpi.pwmWrite(18, pulse)  
+        time.sleep(delay\_period)  
+    for pulse in range(250, 50, -1):  
+        wiringpi.pwmWrite(18, pulse)  
+        time.sleep(delay_period)  
+\end{python}
+\subsubsection{Training on Arduino}
+
+\paragraph{Training on Servo Motors with Arduino}
+
+\begin{lstlisting}[style=CStyle]
+#include <Servo.h>
+
+Servo Servo1;	// create servo named Servo1 to control a servo
+int pos = 0;	// variable to store the servo position }
+
+void setup() 
+{  
+  Servo1.attach(9);	// attaches the servo on pin 9 to the servo object  
+} 
+
+void loop() 
+{ 
+    for (pos = 0; pos <= 180; pos += 1)	// goes from 0 degrees to 180 degrees in steps of 1 degree  
+    {
+        Servo1.write(pos);	// tell servo to go to position in variable 'pos' 
+        delay(15);	// waits 15ms for the servo to reach the position 
+    }
+    for (pos = 180; pos >= 0; pos -= 1) // goes from 180 degrees to 0 degrees 
+    {
+       Servo1.write(pos);	// tell servo to go to position in variable 'pos'  
+        delay(15);	// waits 15ms for the servo to reach the position  
+    } 
+}
+\end{lstlisting}
+\subsection{Project Coding}
+
+\subsubsection{Raspberry Pi Part}
+\begin{python}
+from gpiozero import LightSensor, Buzzer 
+
+import RPi.GPIO as GPIO  
+import time  
+
+GPIO.setmode(GPIO.BCM)  
+GPIO.setwarnings(False)  
+GPIO.setup(23,GPIO.OUT)  
+GPIO.setup(24,GPIO.OUT)  
+GPIO.setup(25,GPIO.OUT)  
+GPIO.setup(8,GPIO.OUT)  
+
+ldr = LightSensor(4)# Assign the data coming from LDR1 to ldr
+ldr2 = LightSensor(17)	# Assigns the data similarly 
+ldr3 = LightSensor(27)
+ldr4 = LightSensor(22) 
+
+while True: 
+    bir=ldr.value+ldr2.value  # Total Readings of Top 
+    iki=ldr3.value+ldr4.value # Total Readings of Bottom  
+    uc=ldr.value+ldr3.value   # Total Readings of Left 
+    dort=ldr2.value+ldr4.value  # Total Readings of Right
+     
+    fark1=bir-iki;	#  
+    fark2=iki-bir;  
+    fark3=uc-dort;   
+    fark4=dort-uc;  
+
+    print("bir= %s" %bir)  
+    print("iki= %s" %iki)  
+    print("uc= %s" %uc)   
+    print("dort= %s" %dort)  
+
+    print("fark1= %s" %fark1)  
+    print("fark3= %s" %fark3) 
+
+    if bir>iki and fark1>0.01:  
+        GPIO.output(23,GPIO.HIGH) 
+        GPIO.output(25,GPIO.LOW)  
+    time.sleep(1)  
+    elif iki>bir and fark2>0.01:  
+        GPIO.output(25,GPIO.HIGH)  
+        GPIO.output(23,GPIO.LOW)  
+        time.sleep(1)  
+    else :  
+        GPIO.output(25,GPIO.LOW)  
+        GPIO.output(23,GPIO.LOW)  
+        time.sleep(1)  
+
+    if uc>dort and fark3>0.01:  
+        GPIO.output(24,GPIO.HIGH)  
+        GPIO.output(8,GPIO.LOW)  
+        time.sleep(1)  
+    elif dort>uc and fark4>0.01:  
+        GPIO.output(8,GPIO.HIGH)  
+        GPIO.output(24,GPIO.LOW)  
+        time.sleep(1)    
+    else :  
+        GPIO.output(24,GPIO.LOW) 
+        GPIO.output(8,GPIO.LOW)  
+        time.sleep(1)
+\end{python}  
+\subsubsection{Arduino Part}
+
+\begin{lstlisting}[style=CStyle]
+#include <Servo.h> 
+
+Servo servo1; 
+Servo servo2; 
+
+int in_rasp1 =3; 
+int in_rasp2 =4; 
+int in_rasp3 =5; 
+int in_rasp4 =6; 
+
+int read1=0; 
+int read2=0; 
+int read3=0; 
+int read4=0; 
+
+void setup()  
+{ 
+    servo1.attach(9); 
+    servo1.writeMicroseconds(1475); 
+    servo2.attach(10); 
+    servo2.writeMicroseconds(1475); 
+
+    pinMode(in_rasp1, INPUT); 
+    pinMode(in_rasp2, INPUT); 
+    pinMode(in_rasp3, INPUT); 
+    pinMode(in_rasp4, INPUT); 
+} 
+void loop()  {  
+    read1 =digitalRead(in_rasp1); 
+    read2 =digitalRead(in_rasp2); 
+    read3 =digitalRead(in_rasp3); 
+    read4 =digitalRead(in_rasp4); 
+
+    if (read1 == HIGH)
+    { 
+        servo1.writeMicroseconds(1515); 
+        delay(42);  
+        servo1.writeMicroseconds(1475); 
+        delay(200);  
+    } 
+    else if (read2 == HIGH) 
+    { 
+        servo1 .writeMicroseconds(1425);
+        delay(24); 
+        servo1.writeMicroseconds(1475); 
+        delay(100);   
+    }  
+    else  
+    {  
+        delay(24);  
+        servo1.writeMicroseconds(1475);  
+        delay(24);  
+    }  
+    if (read3 == HIGH)  
+    {  
+        servo2.writeMicroseconds(1515); 
+        delay(42); 
+        servo2.writeMicroseconds(1475); 
+        delay(100);   
+    } 
+    else if (read4 == HIGH) 
+    { 
+        servo2.writeMicroseconds(1425);  
+        delay(24);  
+        servo2.writeMicroseconds(1475); 
+        delay(100); 
+    } 
+    else 
+    {  
+        delay(24);  
+        servo2.writeMicroseconds(1475);  
+        delay(24);  
+    }   
+}
+\end{lstlisting}
+\subsection{Implementation}
+
+
+
+\subsubsection{PCB Drawing \& 3D Drawings}
+
+\paragraph{PCB Drawing}
+
+
+
+\paragraph{3D Drawings}
+
+
+
+\subsubsection{Construction of the Body}
+
+\paragraph{Top Layer}
+
+
+
+\begin{figure}[H]
+\includegraphics[scale=0.3]{odtuee.png}\\[1cm]
+\caption{\label{fig:cooling}Top Layer }
+\end{figure}
+
+
+
+\paragraph{Main Body}
+
+\begin{figure}[H]
+\includegraphics[scale=0.3]{odtuee.png}\\[1cm]
+\caption{\label{fig:cooling}Body }
+\end{figure}
+
+
+\paragraph{Solar Panel}
+\-
+\\
+..  \\
+..  \\
+..  \\
+..  \\
+..  \\
+
+
+
+\paragraph{Final Body}
+
+
+
+
+\begin{figure}[H]
+\includegraphics[scale=0.3]{odtuee.png}\\[1cm]
+\caption{\label{fig:cooling}Final Body }
+\end{figure}
+
+
+\subsection{Tests}
+
+\subsubsection{System Requirement Tests}
+
+
+
+\begin{figure}[H]
+\includegraphics[scale=0.3]{odtuee.png}\\[1cm]
+\caption{\label{fig:cooling}Body }
+\end{figure}
+
+
+\subsubsection{Subsystem Requirement Tests}
+
+
+
+
+\begin{figure}[H]
+\includegraphics[scale=0.3]{odtuee.png}\\[1cm]
+\caption{\label{fig:cooling}Body }
+\end{figure}
+
+
+\subsubsection{Component Requirement Tests}   
+
+\
+   
+\begin{figure}[H]
+
+\includegraphics[scale=0.3]{odtuee.png}\\[1cm]
+\caption{\label{fig:cooling}Body }
+\end{figure}
+ 
+   
+\section{After Project}
+
+
+\subsection{Training on MATLAB}
+
+\-
+\indent After finishing the project earlier than expected, I was asked to study for educational purposes. Firstly, PCB designing and Solidworks modelling were my priorities since I was not able to do both during the project. Due to limited time, I did not choose either. Since I know the basics, I have chosen Matlab to study on it.
+\subsubsection{Coursera}
+For that purpose, I have enrolled a course on Coursera. Coursera is....
+...\\
+...\\
+...
+\subsubsection{Outline of the Course}
+\- \indent 
+	In the first two weeks of the course program, as can be seen from figure XX, Matlab environment and basic operators were introduced. Since I know them already, I have watched the video lectures in a few hours. After that,    
+
+
+\begin{figure}[H]
+\includegraphics[scale=0.3]{odtuee.png}\\[1cm]
+\caption{\label{fig:cooling}The Syllabus of Matlab Course for First 3 Weeks }
+\end{figure}
+   
+
+\begin{figure}[H]
+\includegraphics[scale=0.3]{odtuee.png}\\[1cm]
+\caption{\label{fig:cooling}The Syllabus of Matlab Course for 4-5-6 Weeks }
+\end{figure}
+
+
+\begin{figure}[H]
+\includegraphics[scale=0.3]{odtuee.png}\\[1cm]
+\caption{\label{fig:cooling}The Syllabus of Matlab Course for Last 2 Weeks }
+\end{figure}   
+\-
+
+\paragraph{Simple Sorting Code}
+\begin{lstlisting}[language=Matlab]
+function [a b c] = sort3(A) 
+a1 = A(1) 
+a2 = A(2) 
+a3 = A(3) 
+
+if a1 <= a2 
+    if a2 <= a3
+        a = a1
+        b = a2
+        c = a3
+    else
+        e = a3 
+        a3 = a2 
+        a2 = e 
+
+        if a1 <= a2 
+            a = a1 
+            b = a2 
+            c = a3 
+        else 
+            w = a2  
+            a2 = a1 
+            a1 = w 
+            a = a1 
+            b = a2 
+            c = a3 
+        end
+    end
+else 
+    w = a2 
+    a2 = a1 
+    a1 = w 
+    if a2 >= a3 
+        e = a3 
+        a3 = a2 
+        a2 = e 
+        if a1 <= a2
+            a = a1 
+            b = a2 
+            c = a3 
+        else 
+            w = a2 
+            a2 = a1 
+            a1 = w 
+            a = a1 
+            b = a2 
+            c = a3 
+        end 
+    else 
+        a = a1 
+        b = a2 
+        c = a3 
+    end  
+end
+end
+}
+\end{lstlisting}
+
+\subsection{Training on Microsoft Sharepoint}
+
+
+\subsubsection{Microsoft Sharepoint}
+\-
+
+SharePoint is a web-based, collaborative platform that integrates with Microsoft Office. Launched in 2001, SharePoint is primarily sold as a document management and storage system, but the product is highly configurable and usage varies substantially between organizations.
+Microsoft states that SharePoint has 190 million users across 200,000 customer organizations.
+
+
+\section{Conclusion}
+
+\-
+\indent For the project, we were expected to built a solar panel system that can follow the sun light to maxinize its efficiency. As planning the project, we used V-model and Agile methodology. As mentioned earlier, using V-model required using another program. We have used Airtable for tracking system requirements, subsystem requirements, tests and so on. The Interface of Airtable \& System Requirements can be seen at figure X. 
+\-
+
+
+
+\section{References }
+
+https://bitbucket.org/temurtas/pi/
+\\
+https://bitbucket.org/temurtas/staj\_matlab
+\\
+https://bitbucket.org/temurtas/ee300\_report
+\\
+https://pomotodo.com/app/
+\-
+
+
+\tikzset{
+desicion/.style={
+    diamond,
+    draw,
+    text width=4em,
+    text badly centered,
+    inner sep=0pt
+},
+block/.style={
+    rectangle,
+    draw,
+    text width=10em,
+    text centered,
+    rounded corners
+},
+cloud/.style={
+    draw,
+    ellipse,
+    minimum height=2em
+},
+descr/.style={
+    fill=white,
+    inner sep=2.5pt
+},
+connector/.style={
+    -latex,
+    font=\scriptsize
+},
+rectangle connector/.style={
+    connector,
+    to path={(\tikztostart) -- ++(#1,0pt) \tikztonodes |- (\tikztotarget) },
+    pos=0.5
+},
+rectangle connector/.default=-2cm,
+straight connector/.style={
+    connector,
+    to path=--(\tikztotarget) \tikztonodes
+}
+}
+
+\tikzset{
+desicion/.style={
+    diamond,
+    draw,
+    text width=4em,
+    text badly centered,
+    inner sep=0pt
+},
+block/.style={
+    rectangle,
+    draw,
+    text width=10em,
+    text centered,
+    rounded corners
+},
+cloud/.style={
+    draw,
+    ellipse,
+    minimum height=2em
+},
+descr/.style={
+    fill=white,
+    inner sep=2.5pt
+},
+connector/.style={
+    -latex,
+    font=\scriptsize
+},
+rectangle connector/.style={
+    connector,
+    to path={(\tikztostart) -- ++(#1,0pt) \tikztonodes |- (\tikztotarget) },
+    pos=0.5
+},
+rectangle connector/.default=-2cm,
+straight connector/.style={
+    connector,
+    to path=--(\tikztotarget) \tikztonodes
+}
+}
+
+\vfill
+
+
+
+
+
+ % Fill the rest of the page with whitespace
+
+% Commands to include a figure:
+%\begin{figure}
+%\centering
+%\includegraphics[width=0.5\textwidth]{frog.jpg}
+%\caption{\label{fig:frog}This is a figure caption.}
+%\end{figure}
+%\subsubsection{Setting Threshold Level}
+%We obtained a triangular wave with $V_{pp}\approx 9.3 V$(asymmetric 9V in experiments). Now we will use a comparator to generate PWM. The triangular wave goes into the noninverting input of the comparator. The inverting input is a DC voltage for setting threshold level. After comparison, we obtain PWM with desired duty cycle \textit{(Figure~\ref{fig:threshold})}. The threshold adjuster has a DC range from $+ V_{pp}$ to $- V_{pp}$. Let us clear how this part of the circuit works. Assume we have $0 V$ DC in inverting input of opamp. Opamp changes output by comparing inputs. Till triangular wave becomes $0 V$ from $+ V_{pp}$, opamp outputs $+ V_{sat}$. On the other hand till triangular wave becomes $- V_{pp}$ from $0 V$, opamp outputs $- V_{sat}$. Since triangular wave is symmetric, these time intervals are equal, resulting a 50\% duty cycle. We can look \textit{Figure~\ref{fig:pwm1}} to see simulation result.
+%Let us give another example with numbers. Assume that we have $-2.5 V$ DC in the inverting input of opamp. Opamp outputs a voltage by comparing the inputs. Till triangular wave becomes $-2.5 V$ from $+ V_{pp}$, opamp gives $+ V_{sat}$. On the other hand till triangular wave becomes $- V_{pp}$ from $-2.5 V$, opamp outputs $- V_{sat}$. Since triangular wave is symmetric, these time intervals have certain ratio, resulting PWM has 75\% duty cycle. We can look \textit{Figure~\ref{fig:pwm2}} to see simulation result.
+%Further calculations can be done by following equation, where \textit{D} is the duty cyle, \textit{T} is the time the signal is active and \textit{P} is the total period of the signal.
+%\begin{equation}
+%D = \frac{T}{P} * 100
+%\end{equation}
+%
+%In \textit{Figure~\ref{fig:pwm1} and Figure~\ref{fig:pwm2}}, blue represents generated PWM, magenta represents threshold level and green is generated triangular wave. The experimental results are also presented in \textit{Figure~\ref{fig:pwm1sim} and Figure~\ref{fig:pwm2sim}}, respectively.  The one deflection, in lab sessions, was that $+V_{peak}$ and $-V_{peak}$ of the duty cycle was not equal. The duty cycle has a DC offset. It were causing problems in the next stages of the circuit. For this purpose, we  have connected a series $0.483V$ battery between PWM Output and RC circuit to have symmetric duty cycle with respesct to x axis. By this way we will be able to indicate 0\degree C for 50\% duty cycle. The symmetric duty cycle could be seen in the next section \textit{Transforming PWM to DC} in \textit{Figure~\ref{fig:rcsim}}.
+%\vfill
+%\begin{figure}[t!]
+%\centering
+%\includegraphics[scale=0.3]{pwm1.png}
+%\caption{\label{fig:pwm1}Waveforms of Outputs of Threshold Adjuster and PWM Generator.}
+%\end{figure}
+%
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=0.1]{pwm1sim.jpg}
+%\caption{\label{fig:pwm1sim}Waveforms of Outputs of Threshold Adjuster.}
+%\end{figure}
+%\vfill
+%\begin{figure}[t!]
+%\centering
+%\includegraphics[scale=0.3]{pwm2.png}
+%\caption{\label{fig:pwm2}Waveforms of Outputs of Threshold Adjuster and PWM Generator.}
+%\end{figure}
+%
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=0.1]{pwm2sim.jpg}
+%\caption{\label{fig:pwm2sim}Waveforms of Outputs of Threshold Adjuster.}
+%\end{figure}
+%\vfill
+%
+%\subsubsection{Transforming PWM to DC}
+%By PWM generation, we are able to see the desired temperature level visually which is analogous to remote control in real life. However, we shall send a DC voltage to decision unit. This choice is suitable with our design. For this purpose, to transform PWM to DC voltage, we have used well-known two stage RC circuit\textit{(Figure~\ref{fig:dcgenerate})}.
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=0.4]{dcgenerate.png}
+%\caption{\label{fig:dcgenerate}Transforming PWM to DC.}
+%\end{figure} The RC circuit basically takes the average of the PWM and generates a DC voltage with ripple. Low ripple means more accurate DC voltage. So, to increase accuracy of DC voltage, we have used second order RC circuit. Second RC circuit reduces ripple voltage significantly, provides almost ideal DC voltage. 
+%\begin{figure}[hb!]
+%\centering
+%\includegraphics[scale=0.35]{rc.png}
+%\caption{\label{fig:rc}Observed wave forms in corresponding nodes in  \textit{Figure~\ref{fig:dcgenerate}}.}
+%\end{figure}As seen in \textit{Figure~\ref{fig:rc}} it takes a little longer for second order RC circuit to reach steady state when compared to first order RC circuit, however, it is negligible. In \textit{Figure~\ref{fig:rc}}, we can observe DC voltage generation for 50\% PWM. The corresponding nodes are indicated in \textit{Figure~\ref{fig:dcgenerate}}. As mentioned in the previous section, we faced duty cycle with an offset. The $+V_p$ was higer than the $-V_p$ by $\sim0.9V$. We solved this by connecting a 0.483V DC battery. The  result for obtaining DC value is shown in \textit{Figure~\ref{fig:rcsim}}. It is easy to see that RC circuit transforms \%50 duty cycle to 0V DC voltage. The DC voltage is indicated with CH2 probe.
+%\begin{figure}[t!]
+%\centering
+%\includegraphics[scale=0.1]{rcsim.jpg}
+%\caption{\label{fig:rcsim}Observed wave forms in corresponding nodes in  \textit{Figure~\ref{fig:dcgenerate}}.}
+%\end{figure}
+%
+%\subsection{Sensing Unit}
+%\begin{figure}[b!]
+%\centering
+%\includegraphics[scale=0.5]{sensingunit.png}
+%\caption{\label{fig:sensingunit}LM35 Sensing Unit.}
+%\end{figure}
+%Temperature sensing unit is analog temperature sensor \textit{(Figure~\ref{fig:sensingunit})}. It works with 12V $V_s$ and one pin goes to ground. $V_{out}$ is 0V for 0 degrees and it varies 10mV for each degree, namely, 500mV for 50\degree C and -500mV for (-50)\degree C. However, we are indicating the desired room temperature with a voltage level varying between -12V and 12V. To be able to compare these two datas, we should be able to observe them in same voltage scales. 
+%
+%For this purpose, we have used a noninverting amplifier. The basic equation for a noninverting amplifier is
+%\begin{equation}
+%V_{out}= \left(1 + \frac{R_9}{R_{10}}\right)V_{in}
+%\end{equation}
+%If we plug in the number used in our circuit
+%\begin{equation}
+%V_{out}= \left(1 + \frac{23k\ohm}{1k\ohm}\right)V_{in} = 24V_{in}
+%\end{equation}
+%
+%This means we will amplify the input by a factor of 24. Let's look the scaled new outputs obtained from LM35 by amplifying in \textit{Table~\ref{tab:LM35new}}. Simulation results are ols presented in \textit{Figure~\ref{fig:lm35cursor}}.
+%\begin{figure}[t!]
+%\centering
+%\includegraphics[scale=0.31]{lm35cursor.png}
+%\caption{\label{fig:lm35cursor}Simulation result for Custom \& Scaled output of LM35 Sensor.}
+%\end{figure}
+%\begin{table}[h!]
+%  \centering
+%  
+%  \begin{tabular}{c|c}
+%    $$Custom Outputs$$ & $$Scaled Outputs$$ \\ \hline
+%    500mV (50\degree C)	 &   12V \\ 
+%-500mV (-50\degree C) & -12V   \\ 
+%10mV(1\degree C) & 0.24V
+%  \end{tabular}
+%  \caption{Custom \& Scaled output of LM35 Sensor.}
+%  \label{tab:LM35new}
+%\end{table}
+%
+%\subsection{Control Unit}
+%Control unit is a composition of two subunits. First, decision unit gives a proper output according to required operation. Second, function unit includes a 5W stone resistor for heating operation, a 12V DC cooling fan for cooling operation and an RGB LED to indicate which operation is taking place.
+%
+%
+%\subsubsection{Decision Unit}
+%The most important part of the decision unit is an LM358 difference amplifier which is U5A in \textit{Figure~\ref{fig:decisionunit}}. It compares the voltage values coming from the outputs of the sensing unit and the temperature adjustment unit. Formula for a difference amplifier can be expressed by node analysis as
+%\begin{equation}
+%V_{out_{U5A}} = \left(\frac{R_9}{R_9+R_8}\right)\left(\frac{R_{11}+R_{12}}{R_{11}}\right)V_{SC2} - \frac{R_{12}}{R_{11}}V_{SC1}
+%\end{equation}
+%When $R_{8}=R_{11}$ and $R_{9}=R_{12}$ equation simplifes to
+%\begin{equation}
+%V_{out_{U5A}} = \left(\frac{R_{12}}{R_{11}}\right)(V_{SC2} - V_{SC1})
+%\end{equation}
+%
+%\begin{figure}[b!]
+%\centering
+%\includegraphics[scale=0.48]{decisionunit.png}
+%\caption{\label{fig:decisionunit}The Circuit Diagram of Decison Unit.}
+%\end{figure}
+%Let's plug in the numbers for our circuit
+%\begin{equation}
+%V_{out_{U5A}} = \left(\frac{27.5k\ohm}{2.2k\ohm}\right)(V_{SC2} - V_{SC1})=12.5(V_{SC2} - V_{SC1})
+%\end{equation}
+%So the U5A amplifies the voltage difference by a factor of 12.5. Some outputs and simulation results for sample $(V_{SC2} - V_{SC1})$ could be seen in \textit{Table~\ref{tab:decisionunit}} and \textit{Figure~\ref{fig:U5A}}.
+%\begin{table}[H]
+%  \centering
+%  \begin{tabular}{c|c}
+%    $$$V_{SC2} - V_{SC1}$$$ & $$U5A  Output$$ \\ \hline
+%    0.24V (1\degree C)	 &   3V \\ 
+%-0.24V (-1\degree C) & -3V   \\ 
+%0.48V (2\degree C) & 6V   \\ 
+%-0.48V (-2\degree C) & -6V   \\
+%0.72V (3\degree C) & 9V   \\
+%-0.96V (-4\degree C) & 12V($-V_{sat}$)   \\
+%1.2V(5\degree C) & 12V($+V_{sat}$) \\
+%-3.6V(-15\degree C) & -12V($-V_{sat}$)
+%  \end{tabular}
+%  \caption{Change in output of U5A according to $V_{SC2} - V_{SC1}$.}
+%  \label{tab:decisionunit}
+%\end{table}
+%\begin{figure}[h]
+% 
+%\begin{subfigure}{0.5\textwidth}
+%\includegraphics[scale=.4, width=.9\linewidth]{U5A1.png} 
+%\caption{}
+%\label{fig:subim1}
+%\end{subfigure}
+%\begin{subfigure}{0.5\textwidth}
+%\includegraphics[scale=.4,width=.9\linewidth]{U5A3.png}
+%\caption{}
+%\label{fig:subim2}
+%\end{subfigure}
+%
+%\caption{Sample simulations for the datas in \textit{Table~\ref{tab:decisionunit}}. }
+%\label{fig:U5A}
+%\end{figure}
+%
+%As we can see opamp U5A is in linear mode as long as
+%$$ \left|V_{SC2} - V_{SC1}\right|<0.96V$$
+%Another function of decision unit is to act accordingly if temperature difference between ambient and desired less than or equal to 2\degree C.  Mathematically $$ \Delta T \leq 2$$
+%If this is the case, unit should give a proper output so that neither cooling nor heating unit works.In other words, circuit passes to an idle mode. If $$ \Delta T >2$$ unit should give a proper output so that either cooling or heating units work accordingly. 
+%
+%For this purpose, \textit{U10A} is placed before heating unit, also, \textit{U7A} and \textit{U9A} are placed before cooling unit. What \textit{U10A} do is, it compares the output of \textit{U5A} with a \textit{6V} VCC. Since the output of U5A is 3V for every 1\degree C untill 4\degree C difference, 6V means a 2\degree C difference between the ambient and desired temperature level. If the difference is higher than 2\degree C, U10A outputs $+V_{sat}$ and heating unit starts to take the action. If not, heating unit doesn't work. The working principles of U7A and U9A is similar. U7A is an inverting amplifier. It decreases the voltage by a 10\% while changing the sign of voltage. Decreasing voltage level is a result of observation in simulation. The output of U5A sometimes exceeds the 6V level by 0.1V, so decreasing may prevent unwanted results. U9A compares the 10\% decreased voltage of U5A with a  6V. If it is less than 6V, meaning temperature difference is less than 2\degree C, cooler doesn't work. If not, cooler takes the action.
+%\subsubsection{Function Unit}
+%   Function unit cools the air and RGB LED emits the purple light to indicate cooling operation. The cooling operation takes place if the temperature of the ambient is higher than the desired temperature at least 2\degree C. On the other hand, the heating operation takes place if the temperature of the ambient is less than the desired temperature at least 2\degree C. However, if the temperature difference is neither greater than 0\degree C nor less than 0\degree C, the function unit goes to the idle mode. Through the all operations, we assume ambient is 27\degree C unless otherwise stated.
+%\paragraph{Heating Operation}
+%We have adjusted the circuit so that if the output voltage of the temperature adjustment unit is higher enough(i.e. $>2\degree C, 6V$) than the output voltage of the sensing unit, the heating operation starts. In this case, U9A gives $-V_{sat}$ as output whereas U10A gives $+V_{sat}$. Moreover, 1N4007 diodes are placed appropriately so that only parts related to the heating operation works. In heating operation, an $2.5\ohm$ stone resistor heats the ambient. The current isn't enough to heat the stone resistor, because, opamp U10 only outputs a 40mA current at most. We used BD135(Q1) transistor to increase the current through stone resistor. When a positive voltage applied to the base of the transistor, it immediately increases the current. As ambient warms up, an RGB LED emits the yellow light. In lab session we did use the same structure for heating operation. When we set the exactly \textit{Figure~\ref{fig:heating}} on the breadboard, we observed 1.5A current through stone resistor and we saved RGB LED last minute before burning out. So, we have changed the resistance values. They are tabulated in the \textit{Table~\ref{tab:manires}}. To obtain yellow light, we let RGB LED to emit only the red(LED3) and green(LED1) lights. The heating part of the circuit and the simulation result for the 80\% duty cycle(i.e. 9V difference, +3\degree C) could be seen in \textit{Figure~\ref{fig:heating} and Figure~\ref{fig:heatingmani}}. The \textit{Figure~\ref{fig:heatingmanisim}} also shows that circuit works for 80\% duty cycle.
+%\begin{figure}[t!]
+%\centering
+%\includegraphics[scale=0.6]{heating.png}
+%\caption{\label{fig:heating}The circuit diagram for Heating Operation.}
+%\end{figure}
+%\begin{table}[H]
+%  \centering
+%  \begin{tabular}{c|c}
+%    $$$Resistance$$$ & $$New Value(\ohm)$$ \\ \hline
+%    R15	 &   1.5k \\ 
+%    R16	 &   3k \\ 
+%R17 & 10k   \\ 
+%R18 & 2.2k   \\ 
+%R19 & 10k   \\
+%
+%  \end{tabular}
+%  \caption{New resistance values.}
+%  \label{tab:manires}
+%\end{table}
+%\begin{figure}[h]
+%\centering
+%\includegraphics[scale=0.6]{heatingmani.png}
+%\caption{\label{fig:heatingmani}The circuit simulation for 80\% duty cycle for Heating Operation.}
+%\end{figure}
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=0.115]{heatingmanisim.jpg}
+%\caption{\label{fig:heatingmanisim}The circuit for 80\% duty cycle on breadboard.}
+%\end{figure}
+%\vfill
+%\paragraph{Cooling Operation}
+%We have adjusted the circuit so that if the output voltage of the temperature adjustment unit is lower enough(i.e. $<2\degree C, -6V$) than the output voltage of the sensing unit, the cooling operation starts.In this case, U9A gives $+V_{sat}$ as output whereas U10A gives $-V_{sat}$. Moreover, 1N4007 diodes are placed appropriately so that only parts related to the heating operation works.
+%In cooling operation, a 12V DC fan works. The 40mA current output of opamp U9A is not enough to drive the fan. To solve this problem, we used BD135(Q2) transistor to get enough current through DC fan just like in heating operation as seen in the \textit{Figure~\ref{fig:cooling}}. As ambient cools down, the operation is indicated with a purple light. To obtain purple light emission we let RGB LED to emit only the red(LED3) and blue(LED2) lights.  The simulation result for the 74\% duty cycle(i.e. -9V difference, -3\degree C) could be seen in \textit{Figure~\ref{fig:coolingmani}}. The working circuit for edited resistance values(\textit{Table~\ref{tab:manires}}) and 74\% duty cycle can be seen in \textit{Figure~\ref{fig:coolingmanisim}}.
+%    
+%
+%     
+%\begin{figure}[t!]
+%\centering
+%\includegraphics[scale=0.62]{cooling.png}
+%\caption{\label{fig:cooling}The circuit diagram for Cooling Operation.}
+%\end{figure}
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=0.55]{coolingmani.png}
+%\caption{\label{fig:coolingmani}The circuit simulation for 74\% duty cycle for Cooling Operation.}
+%\end{figure}
+% \vspace*{5cm} 
+% \vfill
+%     
+%
+%\begin{figure}[t]
+%\centering
+%\includegraphics[scale=0.084]{coolingmanisim.jpg}
+%\caption{\label{fig:coolingmanisim}The circuit for 74\% duty cycle on breadboard.}
+%\end{figure}
+% % Fill the rest of the page with whitespace
+%
+%\vspace{\fill}
+%
+%\paragraph{Idle Mode}
+%We have adjusted the circuit so that if the difference between the output voltage of the temperature adjustment unit and the output voltage of the sensing unit is neither greater than 2\degree C(6V) nor less than -2\degree C(-6V), the circuit goes into the idle state. In other words, both stone resistor and DC fan doesn't work and RGB LED doesn't emit any light. In idle state,only op amps,resistors and potentiometers consume power which is neglibile when compared with the power consumption of the stone resistor or the DC fan. The circuit in idle mode could be seen in \textit{Figure~\ref{fig:idlemanisim}}.
+%\vfill
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=0.75]{idlemani.png}
+%\caption{\label{fig:idlemani}The circuit simulation for 78\% duty cycle for Idle Mode.}
+%\end{figure}
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=0.10]{idlemanisim.jpg}
+%\caption{\label{fig:idlemanisim}The circuit for 78\% duty cycle on breadboard.}
+%\end{figure}
+%\section{Power Consumption}
+%We will analyze the power consumption in the circuit in three states, namely, cooling, idle and heating. The calculation can be done by multiplying voltage(V) and current(A) indicated in Agilent DC Power Supply screen. The values for three states are tabulated in \textit{Table~\ref{tab:power}}.
+%\begin{table}[h!]
+%  \centering
+%  
+%  \begin{tabular}{c|c|c|c}
+%    &$$Voltage(V)$$ & $$Current(A)$$&$$Power(W)$$ \\ \hline
+%    Cooling Operation & 12 & 0.226 & 2.712 \\ \hline
+%    Idle State & 12 & 0.038 & 0.456 \\ \hline
+%    Heating Operation & 12  & 0.228 & 2.736
+%  \end{tabular}
+%  \caption{Power consumption in different states.}
+%  \label{tab:power}
+%\end{table}
+%\begin{table}[h!]
+%  \centering
+%  
+%  \begin{tabular}{c|c|c|c}
+%    &$$Number of used$$ & $$Unit Price (TL/unit)$$ & $$Cost(TL)$$ \\ \hline
+%    Various Resistors & 33 & 0.021 & 0.693 \\ \hline
+%    Stone Resistor & 1 & 0.25 & 0.25 \\ \hline
+%    Potentiometers & 2  & 0.53 & 1.06 \\ \hline
+%    Capacitors & 6  & 0.0665 & 0.399 \\ \hline
+%    1N4007 Diode & 2  & 0.049 & 0.098 \\ \hline
+%    RGB LED & 1  & 3.5 & 3.5 \\ \hline
+%    LM35 Sensor & 1  & 5.25 & 5.25 \\ \hline
+%    LM358 Opamp & 6 &  0.39 & 2.34 \\ \hline
+%    BD135 Transistor & 2  & 0.39 & 0.78 \\ \hline
+%    Heat Sink & 2  & 0.85 & 1.7 \\ \hline
+%    12V DC fan & 1  & 5.18 & 5.18 \\ \hline
+%    Breadboard & 1  & 39.20 & 39.20 \\ \hline
+%    Jumper Kit & 1  & 14.00& 14.00 \\ \hline
+%     &   & $$TOTAL$$& 74.45 
+%  \end{tabular}
+%  \caption{The cost analysis of the whole project.}
+%  \label{tab:cost}
+%\end{table}
+%\section{Cost Analysis}
+%We have used several circuit components to build analog air conditioner system. The datas are tabulated in \textit{Table~\ref{tab:cost}}. Some components burnt out during the project, however, they are not included in the cost analysis.
+%
+%\section{Overview of the Circuit}
+%So far, we have analyzed the whole circuit part by part. The changes during the experiments were indicated and tabulated. the overall schematic of the circuit could be seen in \textit{Figure~\ref{fig:circuitoverview}} with block diagrams. The resulting work on breadboard is also presented in \textit{Figure~\ref{fig:circuitoverviewbread}}.
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=0.12]{circuitoverviewbread.jpg}
+%\caption{\label{fig:circuitoverviewbread}The circuit overview on breadboard.}
+%\end{figure}
+%\vfill 
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=0.5]{circuitoverview.png}
+%\caption{\label{fig:circuitoverview}The overall circuit schematic.}
+%\end{figure}
+%
+%
+%\section{Conclusion}
+%In this project we learnt how to create PWM with varying duty cycle without using integrated circuits in several ways. We made choices according to our design, the suitable one. We acquaired a wider understanding of some circuits and concepts. We utilized from most of the opamp circuits according to purpose of the operation. For instance, we faced with the load effect and implemented a buffer opamp that part which solved the problem. We have designed a decision unit which we used  a difference amplifier. We learnt how to use and how to choose RGB LED. It makes a big difference to choose suitable RGB LED, common anode or cathode. We dealt with low currents by using npn transistors. On the other hand, we realized that not everything in real life behaves like in simulation. So, we had to make adjustments on the values to get desired outputs. To sum up, we learnt how to choose suitable circuits, how to debug the circuit by changing components, values, structures. We have understood the importance of developing new ideas and having visionary perspective when building and setting up the circuit.
+
+
+\end{document}
